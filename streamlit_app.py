@@ -2,7 +2,9 @@ import streamlit as st
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 from peft import PeftModel
-
+#模型下载
+from modelscope import snapshot_download
+model_dir = snapshot_download('IEITYuan/Yuan2-2B-Mars-hf', cache_dir="./models")
 
 # 模型初始化
 path = './models/IEITYuan/Yuan2-2B-Mars-hf'
